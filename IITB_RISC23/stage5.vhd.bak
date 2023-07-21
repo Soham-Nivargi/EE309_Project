@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity memory is
+	port(
+		  opcode : in std_logic_vector(3 downto 0);
+		  
+		  mem_rd, mem_wr : in std_logic;
+		  ra_data: in std_logic_vector(15 downto 0);
+		  
+		  mem_data_out, mem_data_in : out std_logic_vector(15 downto 0)
+		  
+		  );
+		  
+end entity memory;
+
+architecture ma_stage of memory is
+
+	
+	begin 
+	
+		
+		
+	
+		
+		load_store: process(rc_data, opcode, ra_data)
+			
+		begin
+		
+			if(opcode = "0100") then 
+				address <= rc_data;
+			elsif(opcode = "0101") then
+				address <= rc_data;
+				inp <= ra_data;
+			elsif(opcode = "0110") then
+			--write for LM
+			elsif(opcode = "0111") then
+			--write for SM
+			end if;
+		end process;
+
+
+
+end architecture;

@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity reg_dec is
+	port( ra_add, rb_add, rc_add, lm_flag, sm_flag: in std_logic_vector(2 downto 0);
+			r0_flag, r1_flag, r2_flag, r3_flag, r4_flag, r5_flag, r6_flag, r7_flag: in std_logic;
+			
+			ra_fin, rb_fin: out std_logic_vector(2 downto 0);
+		);
+end entity reg_dec;
+
+architecture desc of reg_dec is
+
+	signal reg_add: std_logic_vector(2 downto 0);
+	
+	begin
+	
+	ra_fin <= ra_add;
+	
+	rbfin <= reg_add;
+	
+	sel_reg: process(rb_add, r0_flag, r1_flag, r2_flag, r3_flag, r4_flag, r5_flag, r6_flag, r7_flag)
+	
+	begin
+		if(sm_flag = '1') then
+		
+			if(r0_flag = '1') then
+				reg_add <= "000";
+			elsif(r1_flag = '1') then
+				reg_add <= "001";
+			elsif(r2_flag = '1') then
+				reg_add <= "010";
+			elsif(r3_flag = '1') then
+				reg_add <= "011";
+			elsif(r4_flag = '1') then
+				reg_add <= "100";
+			elsif(r5_flag = '1') then
+				reg_add <= "101";
+			elsif(r6_flag = '1') then
+				reg_add <= "110";
+			elsif(r7_flag = '1') then
+				reg_add <= "111";
+			end if;
+		end if;
+			
+	

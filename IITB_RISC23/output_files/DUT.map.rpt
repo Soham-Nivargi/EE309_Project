@@ -1,0 +1,888 @@
+Analysis & Synthesis report for DUT
+Sat May 06 19:24:21 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "pipeline:add_instance|stage56:ma_wb"
+ 10. Port Connectivity Checks: "pipeline:add_instance|stage45:ex_ma"
+ 11. Port Connectivity Checks: "pipeline:add_instance|stage34:rr_ex"
+ 12. Port Connectivity Checks: "pipeline:add_instance|read_op:read_r|alu:alu_jmp"
+ 13. Port Connectivity Checks: "pipeline:add_instance|decode:decode_instr|alu:alu_imm"
+ 14. Port Connectivity Checks: "pipeline:add_instance|decode:decode_instr"
+ 15. Port Connectivity Checks: "pipeline:add_instance|fetch:fetch1|alu:alu_pc"
+ 16. Port Connectivity Checks: "pipeline:add_instance|single_bit_reg:carry_bit"
+ 17. Port Connectivity Checks: "pipeline:add_instance|regfile:reg"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat May 06 19:24:20 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DUT                                         ;
+; Top-level Entity Name              ; DUT                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 3                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M25SAE144C8G     ;                    ;
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------+---------+
+; main.vhd                         ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/main.vhd                ;         ;
+; stage1.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage1.vhd              ;         ;
+; registerfile.vhd                 ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/registerfile.vhd        ;         ;
+; data_memory.vhd                  ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/data_memory.vhd         ;         ;
+; pipereg1.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/pipereg1.vhd            ;         ;
+; singlebit_reg.vhd                ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/singlebit_reg.vhd       ;         ;
+; stage2.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage2.vhd              ;         ;
+; pipereg2.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/pipereg2.vhd            ;         ;
+; stage3.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage3.vhd              ;         ;
+; pipereg3.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/pipereg3.vhd            ;         ;
+; instr_mem.vhd                    ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/instr_mem.vhd           ;         ;
+; alu.vhd                          ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/alu.vhd                 ;         ;
+; left_shift.vhd                   ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/left_shift.vhd          ;         ;
+; control_unit.vhd                 ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/control_unit.vhd        ;         ;
+; signex6_16.vhd                   ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/signex6_16.vhd          ;         ;
+; signex9_16.vhd                   ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/signex9_16.vhd          ;         ;
+; padder7.vhd                      ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/padder7.vhd             ;         ;
+; complement.vhd                   ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/complement.vhd          ;         ;
+; control_hazard_unit.vhd          ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd ;         ;
+; branch_control.vhd               ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/branch_control.vhd      ;         ;
+; comparator.vhd                   ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/comparator.vhd          ;         ;
+; stage4.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage4.vhd              ;         ;
+; pipereg4.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/pipereg4.vhd            ;         ;
+; stage5.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage5.vhd              ;         ;
+; pipereg5.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/pipereg5.vhd            ;         ;
+; stage6.vhd                       ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/stage6.vhd              ;         ;
+; forwarding_unit.vhd              ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/forwarding_unit.vhd     ;         ;
+; reg_addr.vhd                     ; yes             ; User VHDL File        ; D:/Semester_4/IITB_RISC23/reg_addr.vhd            ;         ;
+; dut.vhd                          ; yes             ; Auto-Found VHDL File  ; D:/Semester_4/IITB_RISC23/dut.vhd                 ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 3               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; input_vector[0] ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 3               ;
+; Average fan-out                             ; 0.50            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |DUT                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |DUT                ; DUT         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|stage56:ma_wb" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; wr_en ; Input ; Info     ; Stuck at VCC                         ;
+; flush ; Input ; Info     ; Stuck at GND                         ;
++-------+-------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|stage45:ex_ma"                                                      ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; wr_en      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; flush      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mem_rd_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|stage34:rr_ex" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; wr_en ; Input ; Info     ; Stuck at VCC                         ;
++-------+-------+----------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|read_op:read_r|alu:alu_jmp"                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cin    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; enable ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|decode:decode_instr|alu:alu_imm"                                ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cin    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; enable ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|decode:decode_instr"                                              ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; reg_read ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|fetch:fetch1|alu:alu_pc"                                              ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; alu_b[15..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; alu_b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; alu_b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cin          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; enable       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|single_bit_reg:carry_bit" ;
++-------+-------+----------+-------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                         ;
++-------+-------+----------+-------------------------------------------------+
+; wr_en ; Input ; Info     ; Stuck at VCC                                    ;
++-------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "pipeline:add_instance|regfile:reg" ;
++-------+-------+----------+------------------------------------+
+; Port  ; Type  ; Severity ; Details                            ;
++-------+-------+----------+------------------------------------+
+; rf_a3 ; Input ; Info     ; Stuck at GND                       ;
+; rf_a5 ; Input ; Info     ; Stuck at GND                       ;
++-------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 3                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat May 06 19:24:09 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC_Pipelined -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: pipeline-final File: D:/Semester_4/IITB_RISC23/main.vhd Line: 11
+    Info (12023): Found entity 1: pipeline File: D:/Semester_4/IITB_RISC23/main.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file stage1.vhd
+    Info (12022): Found design unit 1: fetch-if_stage File: D:/Semester_4/IITB_RISC23/stage1.vhd Line: 13
+    Info (12023): Found entity 1: fetch File: D:/Semester_4/IITB_RISC23/stage1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registerfile.vhd
+    Info (12022): Found design unit 1: regfile-registers File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 25
+    Info (12023): Found entity 1: regfile File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: ram-desc File: D:/Semester_4/IITB_RISC23/data_memory.vhd Line: 16
+    Info (12023): Found entity 1: ram File: D:/Semester_4/IITB_RISC23/data_memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pipereg1.vhd
+    Info (12022): Found design unit 1: stage12-pipereg1 File: D:/Semester_4/IITB_RISC23/pipereg1.vhd Line: 12
+    Info (12023): Found entity 1: stage12 File: D:/Semester_4/IITB_RISC23/pipereg1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file singlebit_reg.vhd
+    Info (12022): Found design unit 1: single_bit_reg-description File: D:/Semester_4/IITB_RISC23/singlebit_reg.vhd Line: 14
+    Info (12023): Found entity 1: single_bit_reg File: D:/Semester_4/IITB_RISC23/singlebit_reg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file stage2.vhd
+    Info (12022): Found design unit 1: decode-id_stage File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 19
+    Info (12023): Found entity 1: decode File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pipereg2.vhd
+    Info (12022): Found design unit 1: stage23-pipereg2 File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 28
+    Info (12023): Found entity 1: stage23 File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file stage3.vhd
+    Info (12022): Found design unit 1: read_op-rr_stage File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 23
+    Info (12023): Found entity 1: read_op File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pipereg3.vhd
+    Info (12022): Found design unit 1: stage34-pipereg2 File: D:/Semester_4/IITB_RISC23/pipereg3.vhd Line: 29
+    Info (12023): Found entity 1: stage34 File: D:/Semester_4/IITB_RISC23/pipereg3.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file instr_mem.vhd
+    Info (12022): Found design unit 1: instr_memory-memory_a File: D:/Semester_4/IITB_RISC23/instr_mem.vhd Line: 14
+    Info (12023): Found entity 1: instr_memory File: D:/Semester_4/IITB_RISC23/instr_mem.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-behav File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 16
+    Info (12023): Found entity 1: alu File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file left_shift.vhd
+    Info (12022): Found design unit 1: l_shifter-shift File: D:/Semester_4/IITB_RISC23/left_shift.vhd Line: 10
+    Info (12023): Found entity 1: l_shifter File: D:/Semester_4/IITB_RISC23/left_shift.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file control_unit.vhd
+    Info (12022): Found design unit 1: controlunit-arch File: D:/Semester_4/IITB_RISC23/control_unit.vhd Line: 15
+    Info (12023): Found entity 1: controlunit File: D:/Semester_4/IITB_RISC23/control_unit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file signex6_16.vhd
+    Info (12022): Found design unit 1: signextender6to16-arch File: D:/Semester_4/IITB_RISC23/signex6_16.vhd Line: 11
+    Info (12023): Found entity 1: signextender6to16 File: D:/Semester_4/IITB_RISC23/signex6_16.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file signex9_16.vhd
+    Info (12022): Found design unit 1: signextender9to16-description File: D:/Semester_4/IITB_RISC23/signex9_16.vhd Line: 11
+    Info (12023): Found entity 1: signextender9to16 File: D:/Semester_4/IITB_RISC23/signex9_16.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file padder7.vhd
+    Info (12022): Found design unit 1: pad7-pad File: D:/Semester_4/IITB_RISC23/padder7.vhd Line: 10
+    Info (12023): Found entity 1: pad7 File: D:/Semester_4/IITB_RISC23/padder7.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file complement.vhd
+    Info (12022): Found design unit 1: complementor-arch File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 13
+    Info (12023): Found entity 1: complementor File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file control_hazard_unit.vhd
+    Info (12022): Found design unit 1: control_hazard-desc File: D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd Line: 16
+    Info (12023): Found entity 1: control_hazard File: D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file branch_control.vhd
+    Info (12022): Found design unit 1: branch_cntrl-branch File: D:/Semester_4/IITB_RISC23/branch_control.vhd Line: 14
+    Info (12023): Found entity 1: branch_cntrl File: D:/Semester_4/IITB_RISC23/branch_control.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
+    Info (12022): Found design unit 1: comparator-description File: D:/Semester_4/IITB_RISC23/comparator.vhd Line: 11
+    Info (12023): Found entity 1: comparator File: D:/Semester_4/IITB_RISC23/comparator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file stage4.vhd
+    Info (12022): Found design unit 1: execute-ex_stage File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 20
+    Info (12023): Found entity 1: execute File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pipereg4.vhd
+    Info (12022): Found design unit 1: stage45-pipereg4 File: D:/Semester_4/IITB_RISC23/pipereg4.vhd Line: 24
+    Info (12023): Found entity 1: stage45 File: D:/Semester_4/IITB_RISC23/pipereg4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file stage5.vhd
+    Info (12022): Found design unit 1: memory-ma_stage File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 16
+    Info (12023): Found entity 1: memory File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pipereg5.vhd
+    Info (12022): Found design unit 1: stage56-pipereg5 File: D:/Semester_4/IITB_RISC23/pipereg5.vhd Line: 27
+    Info (12023): Found entity 1: stage56 File: D:/Semester_4/IITB_RISC23/pipereg5.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file stage6.vhd
+    Info (12022): Found design unit 1: writeback-wb_stage File: D:/Semester_4/IITB_RISC23/stage6.vhd Line: 18
+    Info (12023): Found entity 1: writeback File: D:/Semester_4/IITB_RISC23/stage6.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file forwarding_unit.vhd
+    Info (12022): Found design unit 1: forward-forwarding File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 15
+    Info (12023): Found entity 1: forward File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file reg_addr.vhd
+    Info (12022): Found design unit 1: reg_dec-desc File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 16
+    Info (12023): Found entity 1: reg_dec File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: Testbench-Behave File: D:/Semester_4/IITB_RISC23/testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: D:/Semester_4/IITB_RISC23/testbench.vhd Line: 7
+Warning (12125): Using design file dut.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DUT-DutWrap File: D:/Semester_4/IITB_RISC23/dut.vhd Line: 9
+    Info (12023): Found entity 1: DUT File: D:/Semester_4/IITB_RISC23/dut.vhd Line: 4
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "pipeline" for hierarchy "pipeline:add_instance" File: D:/Semester_4/IITB_RISC23/DUT.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(263): object "id_reg_read" assigned a value but never read File: D:/Semester_4/IITB_RISC23/main.vhd Line: 263
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(289): object "reg4_mem_rd" assigned a value but never read File: D:/Semester_4/IITB_RISC23/main.vhd Line: 289
+Info (12128): Elaborating entity "ram" for hierarchy "pipeline:add_instance|ram:data_memory" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 324
+Info (12128): Elaborating entity "regfile" for hierarchy "pipeline:add_instance|regfile:reg" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 329
+Warning (10631): VHDL Process Statement warning at registerfile.vhd(106): inferring latch(es) for signal or variable "D1", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Warning (10631): VHDL Process Statement warning at registerfile.vhd(106): inferring latch(es) for signal or variable "D2", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Warning (10631): VHDL Process Statement warning at registerfile.vhd(106): inferring latch(es) for signal or variable "DPC", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[0]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[1]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[2]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[3]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[4]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[5]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[6]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[7]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[8]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[9]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[10]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[11]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[12]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[13]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[14]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "DPC[15]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[0]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[1]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[2]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[3]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[4]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[5]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[6]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[7]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[8]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[9]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[10]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[11]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[12]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[13]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[14]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D2[15]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[0]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[1]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[2]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[3]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[4]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[5]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[6]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[7]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[8]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[9]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[10]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[11]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[12]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[13]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[14]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (10041): Inferred latch for "D1[15]" at registerfile.vhd(106) File: D:/Semester_4/IITB_RISC23/registerfile.vhd Line: 106
+Info (12128): Elaborating entity "single_bit_reg" for hierarchy "pipeline:add_instance|single_bit_reg:history_bit" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 334
+Info (12128): Elaborating entity "fetch" for hierarchy "pipeline:add_instance|fetch:fetch1" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 338
+Info (12128): Elaborating entity "instr_memory" for hierarchy "pipeline:add_instance|fetch:fetch1|instr_memory:ir_update" File: D:/Semester_4/IITB_RISC23/stage1.vhd Line: 42
+Info (12128): Elaborating entity "alu" for hierarchy "pipeline:add_instance|fetch:fetch1|alu:alu_pc" File: D:/Semester_4/IITB_RISC23/stage1.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at alu.vhd(37): signal "sumop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at alu.vhd(43): signal "nandop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 43
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "sumop", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "Cout", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "nandop", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[0]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[1]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[2]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[3]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[4]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[5]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[6]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[7]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[8]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[9]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[10]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[11]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[12]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[13]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[14]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "nandop[15]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "Z" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "Cout" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[0]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[1]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[2]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[3]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[4]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[5]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[6]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[7]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[8]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[9]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[10]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[11]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[12]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[13]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[14]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "sumop[15]" at alu.vhd(25) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 25
+Info (10041): Inferred latch for "alu_out[0]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[1]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[2]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[3]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[4]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[5]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[6]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[7]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[8]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[9]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[10]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[11]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[12]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[13]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[14]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (10041): Inferred latch for "alu_out[15]" at alu.vhd(23) File: D:/Semester_4/IITB_RISC23/alu.vhd Line: 23
+Info (12128): Elaborating entity "stage12" for hierarchy "pipeline:add_instance|stage12:if_id" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 343
+Warning (10492): VHDL Process Statement warning at pipereg1.vhd(21): signal "flush" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg1.vhd Line: 21
+Info (12128): Elaborating entity "decode" for hierarchy "pipeline:add_instance|decode:decode_instr" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 348
+Warning (10631): VHDL Process Statement warning at stage2.vhd(124): inferring latch(es) for signal or variable "rr_read1", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at stage2.vhd(124): inferring latch(es) for signal or variable "rr_read2", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at stage2.vhd(124): inferring latch(es) for signal or variable "wb_wr1", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at stage2.vhd(124): inferring latch(es) for signal or variable "comp", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at stage2.vhd(124): inferring latch(es) for signal or variable "cond", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at stage2.vhd(153): signal "imm6_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at stage2.vhd(155): signal "imm9_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at stage2.vhd(157): signal "padd7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 157
+Warning (10631): VHDL Process Statement warning at stage2.vhd(148): inferring latch(es) for signal or variable "imm", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at stage2.vhd(168): signal "pc_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at stage2.vhd(169): signal "pc_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 169
+Info (10041): Inferred latch for "imm[0]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[1]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[2]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[3]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[4]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[5]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[6]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[7]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[8]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[9]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[10]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[11]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[12]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[13]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[14]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "imm[15]" at stage2.vhd(148) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 148
+Info (10041): Inferred latch for "cond[0]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "cond[1]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "comp" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "wb_wr1[0]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "wb_wr1[1]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "wb_wr1[2]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read2[0]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read2[1]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read2[2]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read1[0]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read1[1]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (10041): Inferred latch for "rr_read1[2]" at stage2.vhd(124) File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 124
+Info (12128): Elaborating entity "l_shifter" for hierarchy "pipeline:add_instance|decode:decode_instr|l_shifter:immshift" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 81
+Info (12128): Elaborating entity "controlunit" for hierarchy "pipeline:add_instance|decode:decode_instr|controlunit:control" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 83
+Info (12128): Elaborating entity "branch_cntrl" for hierarchy "pipeline:add_instance|decode:decode_instr|branch_cntrl:branch_comp" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 87
+Info (12128): Elaborating entity "signextender6to16" for hierarchy "pipeline:add_instance|decode:decode_instr|signextender6to16:extend1" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 89
+Info (12128): Elaborating entity "signextender9to16" for hierarchy "pipeline:add_instance|decode:decode_instr|signextender9to16:extend2" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 91
+Info (12128): Elaborating entity "pad7" for hierarchy "pipeline:add_instance|decode:decode_instr|pad7:padder7" File: D:/Semester_4/IITB_RISC23/stage2.vhd Line: 93
+Info (12128): Elaborating entity "stage23" for hierarchy "pipeline:add_instance|stage23:id_rr" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 359
+Warning (10541): VHDL Signal Declaration warning at pipereg2.vhd(21): used implicit default value for signal "brch_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(76): signal "r0_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(78): signal "r1_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(80): signal "r2_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(82): signal "r3_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(84): signal "r4_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(86): signal "r5_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(88): signal "r6_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at pipereg2.vhd(90): signal "r7_updt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg2.vhd Line: 90
+Info (12128): Elaborating entity "reg_dec" for hierarchy "pipeline:add_instance|reg_dec:addresses" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 372
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "reg_add", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r0_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r1_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r2_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r3_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r4_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r5_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r6_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "r7_update", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Warning (10631): VHDL Process Statement warning at reg_addr.vhd(28): inferring latch(es) for signal or variable "reg_add2", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add2[0]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add2[1]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add2[2]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r7_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r6_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r5_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r4_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r3_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r2_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r1_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "r0_update" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add[0]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add[1]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (10041): Inferred latch for "reg_add[2]" at reg_addr.vhd(28) File: D:/Semester_4/IITB_RISC23/reg_addr.vhd Line: 28
+Info (12128): Elaborating entity "read_op" for hierarchy "pipeline:add_instance|read_op:read_r" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 382
+Warning (10631): VHDL Process Statement warning at stage3.vhd(95): inferring latch(es) for signal or variable "jump_here", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Warning (10631): VHDL Process Statement warning at stage3.vhd(136): inferring latch(es) for signal or variable "xin", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Warning (10631): VHDL Process Statement warning at stage3.vhd(136): inferring latch(es) for signal or variable "yin", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[0]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[1]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[2]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[3]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[4]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[5]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[6]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[7]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[8]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[9]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[10]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[11]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[12]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[13]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[14]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "yin[15]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[0]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[1]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[2]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[3]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[4]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[5]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[6]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[7]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[8]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[9]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[10]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[11]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[12]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[13]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[14]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "xin[15]" at stage3.vhd(136) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 136
+Info (10041): Inferred latch for "jump_here[0]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[1]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[2]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[3]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[4]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[5]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[6]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[7]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[8]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[9]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[10]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[11]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[12]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[13]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[14]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (10041): Inferred latch for "jump_here[15]" at stage3.vhd(95) File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 95
+Info (12128): Elaborating entity "comparator" for hierarchy "pipeline:add_instance|read_op:read_r|comparator:comparator1" File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 79
+Info (12128): Elaborating entity "control_hazard" for hierarchy "pipeline:add_instance|read_op:read_r|control_hazard:hazard_comp" File: D:/Semester_4/IITB_RISC23/stage3.vhd Line: 81
+Info (12128): Elaborating entity "stage34" for hierarchy "pipeline:add_instance|stage34:rr_ex" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 393
+Warning (10492): VHDL Process Statement warning at pipereg3.vhd(73): signal "lm_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/pipereg3.vhd Line: 73
+Info (12128): Elaborating entity "execute" for hierarchy "pipeline:add_instance|execute:execute1" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 406
+Warning (10492): VHDL Process Statement warning at stage4.vhd(90): signal "rb_comp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at stage4.vhd(117): signal "rb_comp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 117
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "alu_sel", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "alu_a_in", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "alu_en", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "carry_o", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "comp_en", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Warning (10631): VHDL Process Statement warning at stage4.vhd(68): inferring latch(es) for signal or variable "alu_b_in", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[0]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[1]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[2]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[3]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[4]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[5]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[6]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[7]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[8]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[9]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[10]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[11]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[12]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[13]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[14]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_b_in[15]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "comp_en" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "carry_o" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_en" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[0]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[1]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[2]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[3]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[4]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[5]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[6]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[7]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[8]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[9]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[10]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[11]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[12]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[13]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[14]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_a_in[15]" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (10041): Inferred latch for "alu_sel" at stage4.vhd(68) File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 68
+Info (12128): Elaborating entity "complementor" for hierarchy "pipeline:add_instance|execute:execute1|complementor:compl" File: D:/Semester_4/IITB_RISC23/stage4.vhd Line: 52
+Warning (10631): VHDL Process Statement warning at complement.vhd(16): inferring latch(es) for signal or variable "complementor_out", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[0]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[1]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[2]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[3]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[4]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[5]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[6]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[7]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[8]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[9]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[10]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[11]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[12]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[13]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[14]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (10041): Inferred latch for "complementor_out[15]" at complement.vhd(16) File: D:/Semester_4/IITB_RISC23/complement.vhd Line: 16
+Info (12128): Elaborating entity "stage45" for hierarchy "pipeline:add_instance|stage45:ex_ma" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 414
+Info (12128): Elaborating entity "memory" for hierarchy "pipeline:add_instance|memory:ma" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 426
+Warning (10631): VHDL Process Statement warning at stage5.vhd(22): inferring latch(es) for signal or variable "mem_data_add", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at stage5.vhd(22): inferring latch(es) for signal or variable "mem_data_in", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[0]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[1]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[2]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[3]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[4]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[5]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[6]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[7]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[8]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[9]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[10]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[11]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[12]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[13]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[14]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_in[15]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[0]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[1]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[2]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[3]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[4]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[5]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[6]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[7]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[8]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[9]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[10]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[11]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[12]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[13]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[14]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (10041): Inferred latch for "mem_data_add[15]" at stage5.vhd(22) File: D:/Semester_4/IITB_RISC23/stage5.vhd Line: 22
+Info (12128): Elaborating entity "stage56" for hierarchy "pipeline:add_instance|stage56:ma_wb" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 431
+Info (12128): Elaborating entity "writeback" for hierarchy "pipeline:add_instance|writeback:wb" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 440
+Warning (10631): VHDL Process Statement warning at stage6.vhd(28): inferring latch(es) for signal or variable "flag", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/stage6.vhd Line: 28
+Info (10041): Inferred latch for "flag" at stage6.vhd(28) File: D:/Semester_4/IITB_RISC23/stage6.vhd Line: 28
+Info (12128): Elaborating entity "forward" for hierarchy "pipeline:add_instance|forward:fwd_1" File: D:/Semester_4/IITB_RISC23/main.vhd Line: 449
+Warning (10631): VHDL Process Statement warning at forwarding_unit.vhd(25): inferring latch(es) for signal or variable "fwd_reg", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at forwarding_unit.vhd(25): inferring latch(es) for signal or variable "fod_en", which holds its previous value in one or more paths through the process File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fod_en" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[0]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[1]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[2]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[3]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[4]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[5]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[6]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[7]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[8]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[9]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[10]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[11]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[12]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[13]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[14]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Info (10041): Inferred latch for "fwd_reg[15]" at forwarding_unit.vhd(25) File: D:/Semester_4/IITB_RISC23/forwarding_unit.vhd Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output_vector[0]" is stuck at VCC File: D:/Semester_4/IITB_RISC23/DUT.vhd Line: 6
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "input_vector[0]" File: D:/Semester_4/IITB_RISC23/DUT.vhd Line: 5
+    Warning (15610): No output dependent on input pin "input_vector[1]" File: D:/Semester_4/IITB_RISC23/DUT.vhd Line: 5
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Sat May 06 19:24:21 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:15
+
+

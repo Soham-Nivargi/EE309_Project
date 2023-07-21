@@ -1,0 +1,458 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/main.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:44 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/main.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pipeline
+# -- Compiling architecture final of pipeline
+# End time: 19:26:44 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:45 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity fetch
+# -- Compiling architecture if_stage of fetch
+# End time: 19:26:45 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/registerfile.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:45 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture registers of regfile
+# End time: 19:26:45 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:45 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram
+# -- Compiling architecture desc of ram
+# End time: 19:26:45 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/pipereg1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:45 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/pipereg1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage12
+# -- Compiling architecture pipereg1 of stage12
+# End time: 19:26:45 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/singlebit_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/singlebit_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity single_bit_reg
+# -- Compiling architecture description of single_bit_reg
+# End time: 19:26:46 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decode
+# -- Compiling architecture id_stage of decode
+# End time: 19:26:46 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/pipereg2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/pipereg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage23
+# -- Compiling architecture pipereg2 of stage23
+# End time: 19:26:46 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity read_op
+# -- Compiling architecture rr_stage of read_op
+# End time: 19:26:46 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/pipereg3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/pipereg3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage34
+# -- Compiling architecture pipereg2 of stage34
+# End time: 19:26:46 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/instr_mem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:46 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/instr_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture memory_a of instr_memory
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture behav of alu
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/left_shift.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/left_shift.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity l_shifter
+# -- Compiling architecture shift of l_shifter
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/control_unit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity controlunit
+# -- Compiling architecture arch of controlunit
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/signex6_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/signex6_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signextender6to16
+# -- Compiling architecture arch of signextender6to16
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/signex9_16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/signex9_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signextender9to16
+# -- Compiling architecture description of signextender9to16
+# End time: 19:26:47 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/padder7.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:47 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/padder7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pad7
+# -- Compiling architecture pad of pad7
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/complement.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:48 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/complement.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity complementor
+# -- Compiling architecture arch of complementor
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:48 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control_hazard
+# -- Compiling architecture desc of control_hazard
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/branch_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:48 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/branch_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity branch_cntrl
+# -- Compiling architecture branch of branch_cntrl
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/comparator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:48 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/comparator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity comparator
+# -- Compiling architecture description of comparator
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:48 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity execute
+# -- Compiling architecture ex_stage of execute
+# End time: 19:26:48 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/pipereg4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/pipereg4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage45
+# -- Compiling architecture pipereg4 of stage45
+# End time: 19:26:49 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage5.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory
+# -- Compiling architecture ma_stage of memory
+# End time: 19:26:49 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/pipereg5.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/pipereg5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity stage56
+# -- Compiling architecture pipereg5 of stage56
+# End time: 19:26:49 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/stage6.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/stage6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity writeback
+# -- Compiling architecture wb_stage of writeback
+# End time: 19:26:49 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/forwarding_unit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/forwarding_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity forward
+# -- Compiling architecture forwarding of forward
+# End time: 19:26:49 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/reg_addr.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:49 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/reg_addr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_dec
+# -- Compiling architecture desc of reg_dec
+# End time: 19:26:50 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/dut.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:50 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/dut.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 19:26:50 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Semester_4/IITB_RISC23/testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:26:50 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/Semester_4/IITB_RISC23/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 19:26:50 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 19:26:50 on May 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(final)
+# Loading work.ram(desc)
+# Loading work.regfile(registers)
+# Loading work.single_bit_reg(description)
+# Loading work.fetch(if_stage)
+# Loading work.instr_memory(memory_a)
+# Loading work.alu(behav)
+# Loading work.stage12(pipereg1)
+# Loading work.decode(id_stage)
+# Loading work.l_shifter(shift)
+# Loading work.controlunit(arch)
+# Loading work.branch_cntrl(branch)
+# Loading work.signextender6to16(arch)
+# Loading work.signextender9to16(description)
+# Loading work.pad7(pad)
+# Loading work.stage23(pipereg2)
+# Loading work.reg_dec(desc)
+# Loading work.read_op(rr_stage)
+# Loading work.comparator(description)
+# Loading work.control_hazard(desc)
+# Loading work.stage34(pipereg2)
+# Loading work.execute(ex_stage)
+# Loading work.complementor(arch)
+# Loading work.stage45(pipereg4)
+# Loading work.memory(ma_stage)
+# Loading work.stage56(pipereg5)
+# Loading work.writeback(wb_stage)
+# Loading work.forward(forwarding)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/add_instance/id_rr/brch_out has no driver.
+# This port will contribute value (U) to the signal network.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/fetch1/ir_update
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/data_memory
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 8  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 8  Instance: /testbench/dut_instance/add_instance/read_r/comparator1
+# ** Note: SUCCESS, all tests passed.
+#    Time: 616 ns  Iteration: 0  Instance: /testbench
+vsim work.regfile
+# End time: 19:27:23 on May 06,2023, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 11
+# vsim work.regfile 
+# Start time: 19:27:23 on May 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.regfile(registers)
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+# A time value could not be extracted from the current line
+# End time: 20:40:36 on May 06,2023, Elapsed time: 1:13:13
+# Errors: 0, Warnings: 0

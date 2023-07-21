@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity stage23 is
+	port(clk, reset, wr_en, flush, brch_in : in std_logic;
+		  brch_out : out std_logic;
+          pc_in : in std_logic_vector(15 downto 0);
+          pc_store : in std_logic_vector(15 downto 0);
+          opcode : in std_logic_vector(3 downto 0);
+          ra_add, rb_add, rc_add : in std_logic_vector(2 downto 0);
+          imm16 : in std_logic_vector(15 downto 0);
+          cond : in std_logic_vector(1 downto 0);
+			 comp, reg_wr, mem_rd, mem_wr : in std_logic;
+
+          pc_out, pc_store_out : out std_logic_vector(15 downto 0);
+          opcode_out : out std_logic_vector(3 downto 0);
+          ra_add_out, rb_add_out, rc_add_out : out std_logic_vector(2 downto 0);
+          imm16_out : out std_logic_vector(15 downto 0);
+          cond_out: out std_logic_vector(1 downto 0);
+			 comp_out, reg_wr_out, mem_rd_out, mem_wr_out : out std_logic
+
+		  );
+		  
+end entity stage23;
+
+architecture pipereg2 of stage23 is
+	begin
+		update_pipe2: process(clk, reset, wr_en, flush, brch_in, pc_in, pc_store, opcode, ra_add, rb_add, rc_add, imm16, cond, comp, reg_wr, mem_rd, mem_wr ) is
+            begin
+
+                if(reset = '1' or flush = '1') then
+                    imm16_out <= "0000000000000000";
+			        pc_out <= "0000000000000000";
+			        pc_store_out <= "0000000000000000";
+                    opcode_out <= "0000";
+                    ra_add_out <= "000";
+                    rb_add_out <= "000";
+                    rc_add_out <= "000";
+                    cond_out <= "00";
+                    comp_out <= '0';
+                    reg_wr_out <= '0';
+                    mem_rd_out <= '0';
+                    mem_wr_out <= '0';
+
+                elsif(clk'event and clk = '0' and wr_en = '1') then
+                    imm16_out <= imm16;
+			        pc_out <= pc_in;
+			        pc_store_out <= pc_store;
+                    opcode_out <= opcode;
+                    ra_add_out <= ra_add;
+                    rb_add_out <= rb_add;
+                    rc_add_out <= rc_add;
+                    cond_out <= cond;
+                    comp_out <= comp;
+                    reg_wr_out <= reg_wr;
+                    mem_rd_out <= mem_rd;
+                    mem_wr_out <= mem_wr;
+                
+                end if;
+
+            end process;
+                
+end architecture;

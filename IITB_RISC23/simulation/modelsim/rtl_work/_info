@@ -1,0 +1,1285 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Semester_4/IITB_RISC23/simulation/modelsim
+Ealu
+Z1 w1683224107
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 11
+R0
+Z4 8D:/Semester_4/IITB_RISC23/alu.vhd
+Z5 FD:/Semester_4/IITB_RISC23/alu.vhd
+l0
+L4 1
+V]7WIYHoE7KX`n<iI6RDMU0
+!s100 N[bi2`LNf1d@kQ^k4Q>iA1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1683381407
+!i10b 1
+Z8 !s108 1683381407.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/alu.vhd|
+Z10 !s107 D:/Semester_4/IITB_RISC23/alu.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 3 alu 0 22 ]7WIYHoE7KX`n<iI6RDMU0
+!i122 11
+l21
+L16 35
+VGgiYo8FMjg2iRLoa4a=Z30
+!s100 R`[0hIm5V4MaE3E>X;Xa?2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebranch_cntrl
+Z13 w1683224459
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 19
+R0
+Z15 8D:/Semester_4/IITB_RISC23/branch_control.vhd
+Z16 FD:/Semester_4/IITB_RISC23/branch_control.vhd
+l0
+L5 1
+VQUzUL0WnjkRYdF8GlR55V1
+!s100 8fY25REo3PSM04[FEDY_[0
+R6
+31
+Z17 !s110 1683381408
+!i10b 1
+Z18 !s108 1683381408.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/branch_control.vhd|
+Z20 !s107 D:/Semester_4/IITB_RISC23/branch_control.vhd|
+!i113 1
+R11
+R12
+Abranch
+R14
+R2
+R3
+DEx4 work 12 branch_cntrl 0 22 QUzUL0WnjkRYdF8GlR55V1
+!i122 19
+l16
+L14 18
+VTUYOOh6in:OB7`7kD]fa<3
+!s100 A`cG3PRXEi>=:L^B=jc?;1
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Ecomparator
+Z21 w1683318390
+R14
+R2
+R3
+!i122 20
+R0
+Z22 8D:/Semester_4/IITB_RISC23/comparator.vhd
+Z23 FD:/Semester_4/IITB_RISC23/comparator.vhd
+l0
+L5 1
+Vj49G0RbHi9[AgSN__Qk2P1
+!s100 FWLgMTo]h4>B:jEa_z0Id1
+R6
+31
+R17
+!i10b 1
+R18
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/comparator.vhd|
+Z25 !s107 D:/Semester_4/IITB_RISC23/comparator.vhd|
+!i113 1
+R11
+R12
+Adescription
+R14
+R2
+R3
+DEx4 work 10 comparator 0 22 j49G0RbHi9[AgSN__Qk2P1
+!i122 20
+l15
+L11 35
+VB1ePOm1:6Ydl`A@]nk2hQ0
+!s100 C13id?bn5e6zWX=ZP?:7b1
+R6
+31
+R17
+!i10b 1
+R18
+R24
+R25
+!i113 1
+R11
+R12
+Ecomplementor
+Z26 w1683224366
+R14
+R2
+R3
+!i122 17
+R0
+Z27 8D:/Semester_4/IITB_RISC23/complement.vhd
+Z28 FD:/Semester_4/IITB_RISC23/complement.vhd
+l0
+L5 1
+Vb>RJK@P1P38PBNJB_DcG51
+!s100 mIXHb887DDL?]ZQblnelh0
+R6
+31
+R17
+!i10b 1
+R18
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/complement.vhd|
+Z30 !s107 D:/Semester_4/IITB_RISC23/complement.vhd|
+!i113 1
+R11
+R12
+Aarch
+R14
+R2
+R3
+DEx4 work 12 complementor 0 22 b>RJK@P1P38PBNJB_DcG51
+!i122 17
+l15
+L13 16
+VcO<f?Ne6RXl8D[RoRf?5H3
+!s100 4e4RN7nKj5:b>4Iam1O402
+R6
+31
+R17
+!i10b 1
+R18
+R29
+R30
+!i113 1
+R11
+R12
+Econtrol_hazard
+Z31 w1683224421
+R14
+R2
+R3
+!i122 18
+R0
+Z32 8D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd
+Z33 FD:/Semester_4/IITB_RISC23/control_hazard_unit.vhd
+l0
+L5 1
+VaPOSl[JeE0K2hYFNT8Om<2
+!s100 JTPhXGT^DOdcTAI9o8>542
+R6
+31
+R17
+!i10b 1
+R18
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd|
+Z35 !s107 D:/Semester_4/IITB_RISC23/control_hazard_unit.vhd|
+!i113 1
+R11
+R12
+Adesc
+R14
+R2
+R3
+DEx4 work 14 control_hazard 0 22 aPOSl[JeE0K2hYFNT8Om<2
+!i122 18
+l19
+L16 15
+VdBh8FSMcV@0G1oE>R;l;P2
+!s100 J]e5D?[cnhWiK]P`TUmiW3
+R6
+31
+R17
+!i10b 1
+R18
+R34
+R35
+!i113 1
+R11
+R12
+Econtrolunit
+Z36 w1683369861
+R2
+R3
+!i122 13
+R0
+Z37 8D:/Semester_4/IITB_RISC23/control_unit.vhd
+Z38 FD:/Semester_4/IITB_RISC23/control_unit.vhd
+l0
+L4 1
+V4FYXPW4o605Pd58[FBb^Z0
+!s100 47g[8YTz9R6^M?nDmd0Q11
+R6
+31
+R7
+!i10b 1
+R8
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/control_unit.vhd|
+Z40 !s107 D:/Semester_4/IITB_RISC23/control_unit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 11 controlunit 0 22 4FYXPW4o605Pd58[FBb^Z0
+!i122 13
+l16
+L15 83
+VWG;10i0hZeEOV@a6]KggA3
+!s100 4d:RETgbCK>4j_F5?n;nB1
+R6
+31
+R7
+!i10b 1
+R8
+R39
+R40
+!i113 1
+R11
+R12
+Edecode
+Z41 w1683282768
+R14
+R2
+R3
+!i122 6
+R0
+Z42 8D:/Semester_4/IITB_RISC23/stage2.vhd
+Z43 FD:/Semester_4/IITB_RISC23/stage2.vhd
+l0
+L5 1
+VfzEHFB1?G05TVL6z9C3cb3
+!s100 EadLRM7NkH:8Seh:Y>B1M0
+R6
+31
+Z44 !s110 1683381406
+!i10b 1
+Z45 !s108 1683381406.000000
+Z46 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage2.vhd|
+Z47 !s107 D:/Semester_4/IITB_RISC23/stage2.vhd|
+!i113 1
+R11
+R12
+Aid_stage
+R14
+R2
+R3
+DEx4 work 6 decode 0 22 fzEHFB1?G05TVL6z9C3cb3
+!i122 6
+l79
+L19 232
+V:;Pzb8BIUf8J1^<5h<;TV2
+!s100 gnMdR=Mj::E:5OJHGdMdR3
+R6
+31
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R11
+R12
+Edut
+Z48 w1683367098
+R2
+R3
+!i122 28
+R0
+Z49 8D:/Semester_4/IITB_RISC23/dut.vhd
+Z50 FD:/Semester_4/IITB_RISC23/dut.vhd
+l0
+L4 1
+VAY;;^O@Qf4f]zLPRYJ_3N1
+!s100 <ghfJ2ncJ<IB5WdWX:TD@0
+R6
+31
+Z51 !s110 1683381410
+!i10b 1
+Z52 !s108 1683381410.000000
+Z53 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/dut.vhd|
+Z54 !s107 D:/Semester_4/IITB_RISC23/dut.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 AY;;^O@Qf4f]zLPRYJ_3N1
+!i122 28
+l15
+L9 15
+VEN^^Le8n8DG^UZEb=Oo073
+!s100 domliE=klfX95Mnc?dM^b1
+R6
+31
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R11
+R12
+Eexecute
+Z55 w1683363389
+R14
+R2
+R3
+!i122 21
+R0
+Z56 8D:/Semester_4/IITB_RISC23/stage4.vhd
+Z57 FD:/Semester_4/IITB_RISC23/stage4.vhd
+l0
+L5 1
+V626RAmlOUj0hGl7_glJKB3
+!s100 ShY18kYKQjB=8Je]hCli>2
+R6
+31
+R17
+!i10b 1
+R18
+Z58 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage4.vhd|
+Z59 !s107 D:/Semester_4/IITB_RISC23/stage4.vhd|
+!i113 1
+R11
+R12
+Aex_stage
+R14
+R2
+R3
+DEx4 work 7 execute 0 22 626RAmlOUj0hGl7_glJKB3
+!i122 21
+l48
+L20 156
+V^C9DF=WnU@GdiRXfl1Ol10
+!s100 hRMFiPEDRRXe`JYH6gEm40
+R6
+31
+R17
+!i10b 1
+R18
+R58
+R59
+!i113 1
+R11
+R12
+Efetch
+Z60 w1683203286
+R14
+R2
+R3
+!i122 1
+R0
+Z61 8D:/Semester_4/IITB_RISC23/stage1.vhd
+Z62 FD:/Semester_4/IITB_RISC23/stage1.vhd
+l0
+L5 1
+VkKF`CD7SYG;]4i__TUY0b2
+!s100 eTO@CAWo672VeOdoh?jC60
+R6
+31
+Z63 !s110 1683381405
+!i10b 1
+Z64 !s108 1683381405.000000
+Z65 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage1.vhd|
+Z66 !s107 D:/Semester_4/IITB_RISC23/stage1.vhd|
+!i113 1
+R11
+R12
+Aif_stage
+R14
+R2
+R3
+DEx4 work 5 fetch 0 22 kKF`CD7SYG;]4i__TUY0b2
+!i122 1
+l40
+L13 52
+VYkARGjRzjl[O0c3i7a5711
+!s100 IVd59R]oz0VhRe<S@;ca53
+R6
+31
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R11
+R12
+Eforward
+Z67 w1683318234
+R14
+R2
+R3
+!i122 26
+R0
+Z68 8D:/Semester_4/IITB_RISC23/forwarding_unit.vhd
+Z69 FD:/Semester_4/IITB_RISC23/forwarding_unit.vhd
+l0
+L5 1
+VgEHNJH[nf<`_;^k?LbAdF2
+!s100 2iRmMen<28P5AEMFo?1<A2
+R6
+31
+Z70 !s110 1683381409
+!i10b 1
+Z71 !s108 1683381409.000000
+Z72 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/forwarding_unit.vhd|
+Z73 !s107 D:/Semester_4/IITB_RISC23/forwarding_unit.vhd|
+!i113 1
+R11
+R12
+Aforwarding
+R14
+R2
+R3
+DEx4 work 7 forward 0 22 gEHNJH[nf<`_;^k?LbAdF2
+!i122 26
+l20
+L15 58
+Vo@Fd`?3;>goe`B<ZKKdn_1
+!s100 TX;ZnilUJbG>884Y?4RD^2
+R6
+31
+R70
+!i10b 1
+R71
+R72
+R73
+!i113 1
+R11
+R12
+Einstr_memory
+Z74 w1683368306
+R14
+R2
+R3
+!i122 10
+R0
+Z75 8D:/Semester_4/IITB_RISC23/instr_mem.vhd
+Z76 FD:/Semester_4/IITB_RISC23/instr_mem.vhd
+l0
+L5 1
+V?7z<6leMI;]RbW`^Z]jAn0
+!s100 BIIU]5>]E3BGI0eJUfV:@2
+R6
+31
+R7
+!i10b 1
+R45
+Z77 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/instr_mem.vhd|
+Z78 !s107 D:/Semester_4/IITB_RISC23/instr_mem.vhd|
+!i113 1
+R11
+R12
+Amemory_a
+R14
+R2
+R3
+DEx4 work 12 instr_memory 0 22 ?7z<6leMI;]RbW`^Z]jAn0
+!i122 10
+l18
+L14 9
+VEkhzYl4PK^_8I47;6`hzH2
+!s100 D_79kL6X?A3CNoa6:9bgK3
+R6
+31
+R7
+!i10b 1
+R45
+R77
+R78
+!i113 1
+R11
+R12
+El_shifter
+Z79 w1683224141
+R2
+R3
+!i122 12
+R0
+Z80 8D:/Semester_4/IITB_RISC23/left_shift.vhd
+Z81 FD:/Semester_4/IITB_RISC23/left_shift.vhd
+l0
+L4 1
+V>5V?U][?BCOcUUKUAWZIQ2
+!s100 abEeHg<YKhahG>Zg;Pb]20
+R6
+31
+R7
+!i10b 1
+R8
+Z82 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/left_shift.vhd|
+Z83 !s107 D:/Semester_4/IITB_RISC23/left_shift.vhd|
+!i113 1
+R11
+R12
+Ashift
+R2
+R3
+DEx4 work 9 l_shifter 0 22 >5V?U][?BCOcUUKUAWZIQ2
+!i122 12
+l11
+Z84 L10 7
+VI0zgal23Dig0ASlb8QLaY2
+!s100 Z]OO5E_VPfz4<P?YJgQ1z1
+R6
+31
+R7
+!i10b 1
+R8
+R82
+R83
+!i113 1
+R11
+R12
+Ememory
+Z85 w1683318590
+R14
+R2
+R3
+!i122 23
+R0
+Z86 8D:/Semester_4/IITB_RISC23/stage5.vhd
+Z87 FD:/Semester_4/IITB_RISC23/stage5.vhd
+l0
+L5 1
+Vf[<cJ7U48ED`F@[QjR<Pc3
+!s100 Sc2gbQ7Oe^8;GS;DNid`U3
+R6
+31
+R70
+!i10b 1
+R71
+Z88 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage5.vhd|
+Z89 !s107 D:/Semester_4/IITB_RISC23/stage5.vhd|
+!i113 1
+R11
+R12
+Ama_stage
+R14
+R2
+R3
+DEx4 work 6 memory 0 22 f[<cJ7U48ED`F@[QjR<Pc3
+!i122 23
+l20
+L16 26
+V7_7c5X7X^j>d9Eh97TLO93
+!s100 cD=7>mEWPF^YRB8;jO<cO2
+R6
+31
+R70
+!i10b 1
+R71
+R88
+R89
+!i113 1
+R11
+R12
+Epad7
+Z90 w1683224316
+R2
+R3
+!i122 16
+R0
+Z91 8D:/Semester_4/IITB_RISC23/padder7.vhd
+Z92 FD:/Semester_4/IITB_RISC23/padder7.vhd
+l0
+L4 1
+V^53IS@?8WP32HO[z?h:]k1
+!s100 Z^[QQa>OUURcAmNN?[k^i2
+R6
+31
+R17
+!i10b 1
+R8
+Z93 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/padder7.vhd|
+Z94 !s107 D:/Semester_4/IITB_RISC23/padder7.vhd|
+!i113 1
+R11
+R12
+Apad
+R2
+R3
+DEx4 work 4 pad7 0 22 ^53IS@?8WP32HO[z?h:]k1
+!i122 16
+l11
+R84
+V>RnzFQgAo]Z<iYjD5<aIl2
+!s100 0Hz@M:hc>Aj;`0ki@__HC0
+R6
+31
+R17
+!i10b 1
+R8
+R93
+R94
+!i113 1
+R11
+R12
+Epipeline
+Z95 w1683379916
+R14
+R2
+R3
+!i122 0
+R0
+Z96 8D:/Semester_4/IITB_RISC23/main.vhd
+Z97 FD:/Semester_4/IITB_RISC23/main.vhd
+l0
+L5 1
+VnUhZj>zJnMba=R2oceXjL0
+!s100 lM_HZ6gZhEcRbEa6NSTij2
+R6
+31
+Z98 !s110 1683381404
+!i10b 1
+Z99 !s108 1683381404.000000
+Z100 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/main.vhd|
+Z101 !s107 D:/Semester_4/IITB_RISC23/main.vhd|
+!i113 1
+R11
+R12
+Afinal
+R14
+R2
+R3
+DEx4 work 8 pipeline 0 22 nUhZj>zJnMba=R2oceXjL0
+!i122 0
+l315
+L11 457
+VX<Jj1<l2;D=Q:RLK<zbLQ0
+!s100 VJ40313>SEeGK:bcjEM^C3
+R6
+31
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 1
+R11
+R12
+Eram
+Z102 w1683203938
+R14
+R2
+R3
+!i122 3
+R0
+Z103 8D:/Semester_4/IITB_RISC23/data_memory.vhd
+Z104 FD:/Semester_4/IITB_RISC23/data_memory.vhd
+l0
+L5 1
+VP4f4dV]]kN[Ng<g[S9ojb2
+!s100 j>iFZhCC49U0?7dXHkOk=0
+R6
+31
+R63
+!i10b 1
+R64
+Z105 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/data_memory.vhd|
+Z106 !s107 D:/Semester_4/IITB_RISC23/data_memory.vhd|
+!i113 1
+R11
+R12
+Adesc
+R14
+R2
+R3
+DEx4 work 3 ram 0 22 P4f4dV]]kN[Ng<g[S9ojb2
+!i122 3
+l20
+L16 16
+Vh?I>ocTk4[k]T;<>@RF_D3
+!s100 cTAnbmFWYfcLBZHg37VF;0
+R6
+31
+R63
+!i10b 1
+R64
+R105
+R106
+!i113 1
+R11
+R12
+Eread_op
+Z107 w1683318520
+R14
+R2
+R3
+!i122 8
+R0
+Z108 8D:/Semester_4/IITB_RISC23/stage3.vhd
+Z109 FD:/Semester_4/IITB_RISC23/stage3.vhd
+l0
+L5 1
+VFhIKc[[004RhGiZh3ONcV0
+!s100 PomLAWIY>9?Q^`[ZQKAhT0
+R6
+31
+R44
+!i10b 1
+R45
+Z110 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage3.vhd|
+Z111 !s107 D:/Semester_4/IITB_RISC23/stage3.vhd|
+!i113 1
+R11
+R12
+Arr_stage
+R14
+R2
+R3
+DEx4 work 7 read_op 0 22 FhIKc[[004RhGiZh3ONcV0
+!i122 8
+l73
+L23 131
+V3oz2>@QmBDJQS7diDHnED0
+!s100 fYYmXkfNe:5TWJIOaGFf@3
+R6
+31
+R44
+!i10b 1
+R45
+R110
+R111
+!i113 1
+R11
+R12
+Ereg_dec
+Z112 w1683293934
+R14
+R2
+R3
+!i122 27
+R0
+Z113 8D:/Semester_4/IITB_RISC23/reg_addr.vhd
+Z114 FD:/Semester_4/IITB_RISC23/reg_addr.vhd
+l0
+L5 1
+VjB=U1z_Yc@XEolbjS?z982
+!s100 Dlg3L>d[?Ka374ak0BS7e3
+R6
+31
+R51
+!i10b 1
+R71
+Z115 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/reg_addr.vhd|
+Z116 !s107 D:/Semester_4/IITB_RISC23/reg_addr.vhd|
+!i113 1
+R11
+R12
+Adesc
+R14
+R2
+R3
+DEx4 work 7 reg_dec 0 22 jB=U1z_Yc@XEolbjS?z982
+!i122 27
+l20
+L16 231
+VmJT8=c[heN:==_?jXzdMY0
+!s100 L=8NJ>8Xm`RCM9]l>=ISo3
+R6
+31
+R51
+!i10b 1
+R71
+R115
+R116
+!i113 1
+R11
+R12
+Eregfile
+Z117 w1683376358
+R2
+R3
+!i122 2
+R0
+Z118 8D:/Semester_4/IITB_RISC23/registerfile.vhd
+Z119 FD:/Semester_4/IITB_RISC23/registerfile.vhd
+l0
+L4 1
+V;CgT5O7Sa?LeK=WX6]7Yc0
+!s100 KzW?e>J8Re?j5iIeA??iH0
+R6
+31
+R63
+!i10b 1
+R64
+Z120 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/registerfile.vhd|
+Z121 !s107 D:/Semester_4/IITB_RISC23/registerfile.vhd|
+!i113 1
+R11
+R12
+Aregisters
+R2
+R3
+DEx4 work 7 regfile 0 22 ;CgT5O7Sa?LeK=WX6]7Yc0
+!i122 2
+l37
+L25 167
+VnTO0LFERHN[jM7T:IbMNh2
+!s100 CFO_@bnKX:6TeQ>Z[cT:L0
+R6
+31
+R63
+!i10b 1
+R64
+R120
+R121
+!i113 1
+R11
+R12
+Esignextender6to16
+Z122 w1683224219
+R14
+R2
+R3
+!i122 14
+R0
+Z123 8D:/Semester_4/IITB_RISC23/signex6_16.vhd
+Z124 FD:/Semester_4/IITB_RISC23/signex6_16.vhd
+l0
+L5 1
+VM<`KW2g[oI2GI<OXcA@=g2
+!s100 mRD`QVK2o5eImj:Od>eQR3
+R6
+31
+R7
+!i10b 1
+R8
+Z125 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/signex6_16.vhd|
+Z126 !s107 D:/Semester_4/IITB_RISC23/signex6_16.vhd|
+!i113 1
+R11
+R12
+Aarch
+R14
+R2
+R3
+DEx4 work 17 signextender6to16 0 22 M<`KW2g[oI2GI<OXcA@=g2
+!i122 14
+l12
+Z127 L11 7
+V4ZTh<hM>nXAzJAfKd4VE<0
+!s100 NE]HZlS?_NG5UFXO0E:HZ3
+R6
+31
+R7
+!i10b 1
+R8
+R125
+R126
+!i113 1
+R11
+R12
+Esignextender9to16
+Z128 w1683224248
+R14
+R2
+R3
+!i122 15
+R0
+Z129 8D:/Semester_4/IITB_RISC23/signex9_16.vhd
+Z130 FD:/Semester_4/IITB_RISC23/signex9_16.vhd
+l0
+L5 1
+VbP7>Xd5ElE:BBG@f^mXM@0
+!s100 XOCB;IgiU;nkgbUHkOg132
+R6
+31
+R7
+!i10b 1
+R8
+Z131 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/signex9_16.vhd|
+Z132 !s107 D:/Semester_4/IITB_RISC23/signex9_16.vhd|
+!i113 1
+R11
+R12
+Adescription
+R14
+R2
+R3
+DEx4 work 17 signextender9to16 0 22 bP7>Xd5ElE:BBG@f^mXM@0
+!i122 15
+l12
+R127
+VIC?g3aB>;GP;K<OJBz0>h3
+!s100 cG7ZT?gFa=WJ<8g<[Nkb40
+R6
+31
+R7
+!i10b 1
+R8
+R131
+R132
+!i113 1
+R11
+R12
+Esingle_bit_reg
+Z133 w1683207662
+R2
+R3
+!i122 5
+R0
+Z134 8D:/Semester_4/IITB_RISC23/singlebit_reg.vhd
+Z135 FD:/Semester_4/IITB_RISC23/singlebit_reg.vhd
+l0
+L4 1
+VEj:`DGJ`Wkc:2iDd[Lh:`3
+!s100 GfG_Yld<>onZT3cm2LZ:I1
+R6
+31
+R44
+!i10b 1
+R45
+Z136 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/singlebit_reg.vhd|
+Z137 !s107 D:/Semester_4/IITB_RISC23/singlebit_reg.vhd|
+!i113 1
+R11
+R12
+Adescription
+R2
+R3
+DEx4 work 14 single_bit_reg 0 22 Ej:`DGJ`Wkc:2iDd[Lh:`3
+!i122 5
+l15
+L14 13
+VW7E13hb^PLF4UTd=k6R@M0
+!s100 QBCPDM0BPnEmY`9l0X[j@0
+R6
+31
+R44
+!i10b 1
+R45
+R136
+R137
+!i113 1
+R11
+R12
+Estage12
+Z138 w1683210529
+R14
+R2
+R3
+!i122 4
+R0
+Z139 8D:/Semester_4/IITB_RISC23/pipereg1.vhd
+Z140 FD:/Semester_4/IITB_RISC23/pipereg1.vhd
+l0
+L5 1
+VP8KQ4SS5]aH0MQg75DXE12
+!s100 nAS=]eiW=<2PZT]K9:FeL2
+R6
+31
+R63
+!i10b 1
+R64
+Z141 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/pipereg1.vhd|
+Z142 !s107 D:/Semester_4/IITB_RISC23/pipereg1.vhd|
+!i113 1
+R11
+R12
+Apipereg1
+R14
+R2
+R3
+DEx4 work 7 stage12 0 22 P8KQ4SS5]aH0MQg75DXE12
+!i122 4
+l13
+L12 23
+Vj:2GmXh0iki]OaLoNImSO0
+!s100 njE7Xo8:TNP_Ha`6bZGj53
+R6
+31
+R63
+!i10b 1
+R64
+R141
+R142
+!i113 1
+R11
+R12
+Estage23
+Z143 w1683292312
+R14
+R2
+R3
+!i122 7
+R0
+Z144 8D:/Semester_4/IITB_RISC23/pipereg2.vhd
+Z145 FD:/Semester_4/IITB_RISC23/pipereg2.vhd
+l0
+L5 1
+VVz^An@^4CI4Cc6Tf_iX<D2
+!s100 @zQHaOFO:mQKk=bhDXC6m2
+R6
+31
+R44
+!i10b 1
+R45
+Z146 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/pipereg2.vhd|
+Z147 !s107 D:/Semester_4/IITB_RISC23/pipereg2.vhd|
+!i113 1
+R11
+R12
+Apipereg2
+R14
+R2
+R3
+DEx4 work 7 stage23 0 22 Vz^An@^4CI4Cc6Tf_iX<D2
+!i122 7
+l29
+L28 93
+V6k8XBeXJoe?1FnRZhYiZg0
+!s100 12eoM?5gh[TMDaeXeZkEQ0
+R6
+31
+R44
+!i10b 1
+R45
+R146
+R147
+!i113 1
+R11
+R12
+Estage34
+Z148 w1683356087
+R14
+R2
+R3
+!i122 9
+R0
+Z149 8D:/Semester_4/IITB_RISC23/pipereg3.vhd
+Z150 FD:/Semester_4/IITB_RISC23/pipereg3.vhd
+l0
+L5 1
+VjkQJ0R2Ik>9mEJfE:Wg4F2
+!s100 >KfIVGcNF_<bPZeWH^Uci0
+R6
+31
+R44
+!i10b 1
+R45
+Z151 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/pipereg3.vhd|
+Z152 !s107 D:/Semester_4/IITB_RISC23/pipereg3.vhd|
+!i113 1
+R11
+R12
+Apipereg2
+R14
+R2
+R3
+DEx4 work 7 stage34 0 22 jkQJ0R2Ik>9mEJfE:Wg4F2
+!i122 9
+l30
+L29 93
+VUihOJbejIX>f@HA=3GfbO3
+!s100 f=f778Rn1]8O2XA]bG@9[0
+R6
+31
+R44
+!i10b 1
+R45
+R151
+R152
+!i113 1
+R11
+R12
+Estage45
+Z153 w1683356916
+R14
+R2
+R3
+!i122 22
+R0
+Z154 8D:/Semester_4/IITB_RISC23/pipereg4.vhd
+Z155 FD:/Semester_4/IITB_RISC23/pipereg4.vhd
+l0
+L5 1
+VA:4GZ_6L8_@O9B>PRUlWm2
+!s100 S6zzXU@Kio82GfNQL8ko62
+R6
+31
+R70
+!i10b 1
+R71
+Z156 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/pipereg4.vhd|
+Z157 !s107 D:/Semester_4/IITB_RISC23/pipereg4.vhd|
+!i113 1
+R11
+R12
+Apipereg4
+R14
+R2
+R3
+DEx4 work 7 stage45 0 22 A:4GZ_6L8_@O9B>PRUlWm2
+!i122 22
+l25
+L24 53
+VY5^350izFFFGEVeo_A2LK0
+!s100 jPhmcH:6mBdi=P]2N4JWU1
+R6
+31
+R70
+!i10b 1
+R71
+R156
+R157
+!i113 1
+R11
+R12
+Estage56
+Z158 w1683367369
+R14
+R2
+R3
+!i122 24
+R0
+Z159 8D:/Semester_4/IITB_RISC23/pipereg5.vhd
+Z160 FD:/Semester_4/IITB_RISC23/pipereg5.vhd
+l0
+L5 1
+VBLEeM3`ICXzHPkGSLQCSW0
+!s100 3`jlce2Y^1[dQ?fN9kYLE3
+R6
+31
+R70
+!i10b 1
+R71
+Z161 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/pipereg5.vhd|
+Z162 !s107 D:/Semester_4/IITB_RISC23/pipereg5.vhd|
+!i113 1
+R11
+R12
+Apipereg5
+R14
+R2
+R3
+DEx4 work 7 stage56 0 22 BLEeM3`ICXzHPkGSLQCSW0
+!i122 24
+l28
+L27 48
+V>Ud3SG>K:_F?lmSlL_FbP3
+!s100 1GUM`6cRhWTGGYXe>XG@33
+R6
+31
+R70
+!i10b 1
+R71
+R161
+R162
+!i113 1
+R11
+R12
+Etestbench
+Z163 w1683365895
+R3
+R2
+!i122 29
+R0
+Z164 8D:/Semester_4/IITB_RISC23/testbench.vhd
+Z165 FD:/Semester_4/IITB_RISC23/testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R51
+!i10b 1
+R52
+Z166 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/testbench.vhd|
+!s107 D:/Semester_4/IITB_RISC23/testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 29
+l69
+L9 132
+VOcCeMWfO<>=^WW:T:[ETE2
+!s100 09egbU>P6RTXMJ2cP4kSG0
+R6
+31
+R51
+!i10b 1
+R52
+R166
+Z167 !s107 D:/Semester_4/IITB_RISC23/testbench.vhd|
+!i113 1
+R11
+R12
+Ewriteback
+Z168 w1683365621
+R14
+R2
+R3
+!i122 25
+R0
+Z169 8D:/Semester_4/IITB_RISC23/stage6.vhd
+Z170 FD:/Semester_4/IITB_RISC23/stage6.vhd
+l0
+L5 1
+VH:`Y5n46BmAz0ggFc5iin2
+!s100 e[9z0`fL=`BPb;_dHC^9b3
+R6
+31
+R70
+!i10b 1
+R71
+Z171 !s90 -reportprogress|300|-93|-work|work|D:/Semester_4/IITB_RISC23/stage6.vhd|
+Z172 !s107 D:/Semester_4/IITB_RISC23/stage6.vhd|
+!i113 1
+R11
+R12
+Awb_stage
+R14
+R2
+R3
+DEx4 work 9 writeback 0 22 H:`Y5n46BmAz0ggFc5iin2
+!i122 25
+l23
+L18 43
+VHkz1abgGPQ4fazZBN9lLU0
+!s100 A;;jk?hoXn?zdQ^LDjk`O2
+R6
+31
+R70
+!i10b 1
+R71
+R171
+R172
+!i113 1
+R11
+R12
